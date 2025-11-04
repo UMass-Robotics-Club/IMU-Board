@@ -1,0 +1,7 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "DEV-16771")(type "KiCad")(uri "${KIPRJMOD}/Parts/16771 (MCU)/DEV-16771.kicad_sym")(options "")(descr ""))
+  (lib (name "ADXL326BCPZ-RL7")(type "KiCad")(uri "${KIPRJMOD}/Parts/ADXL326 (Accel)/ADXL326BCPZ-RL7.kicad_sym")(options "")(descr ""))
+  (lib (name "IAM-20380")(type "KiCad")(uri "${KIPRJMOD}/Parts/IAM_20380 (Gyro)/IAM-20380.kicad_sym")(options "")(descr ""))
+  (lib (name "QFN-16_MLX90393_MEL")(type "KiCad")(uri "${KIPRJMOD}/Parts/MLX90393 (Mag)/QFN-16_MLX90393_MEL.kicad_sym")(options "")(descr ""))
+)
