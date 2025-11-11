@@ -2993,7 +2993,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 142.24) (xy 63.5 147.32)
+			(xy 69.85 142.24) (xy 69.85 147.32)
 		)
 		(stroke
 			(width 0)
@@ -3511,6 +3511,16 @@
 		)
 		(uuid "f8087f5e-7e7c-46a5-ade5-a9930c55935c")
 	)
+	(wire
+		(pts
+			(xy 69.85 142.24) (xy 63.5 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff74dc39-51dc-4fd7-9dca-c3fa4066634a")
+	)
 	(label "CS_Gyro"
 		(at 22.86 55.88 180)
 		(effects
@@ -3902,7 +3912,7 @@
 		(uuid "d24fc339-a112-45a0-afba-abe29cb6c177")
 	)
 	(label "GND"
-		(at 63.5 147.32 0)
+		(at 69.85 147.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
