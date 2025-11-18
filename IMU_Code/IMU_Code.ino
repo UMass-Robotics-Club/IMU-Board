@@ -14,16 +14,22 @@
 #define ACC_Y A1
 #define ACC_Z A2
 
+
+
 uint16_t gyro[3];
 int accel[3];
 int mag[3];
+int angle[3];
 
+int timeinterval[3];
+unsigned long currenttime;
 
 void setup() {
   Serial.begin(9600);
   SPI.begin();
   pinMode(GYRO_CS, OUTPUT);
   pinMode(MAG_CS, OUTPUT);
+  currenttime = micros();
 }
 
 void loop() {
@@ -46,6 +52,7 @@ void getGyroAxes(uint16_t* gyro){
     SPI.transfer(GYRO_ADDRESS);
     gyro[i] = gyro[i] | SPI.transfer(0x00);
     GYRO_ADDRESS++;
+    
   }
 
   digitalWrite(GYRO_CS, HIGH);
@@ -57,8 +64,20 @@ void getAccelAxes(int* accel){
   accel[2] = analogRead(ACC_Z);
 }
 
-void getMagAxes(byte* mag){
-    
+void getAngles(){
+  unsigned long newtimes = micros();
+  unsigned long timedelta = newtimes - currenttime;
+  angle[0] += gyro[0] * timedelta;
+  angle[1] += gyro[1] * timedelta;
+  angle[2] += gyro[2] * timedelta;
+  currenttime = newtimes;
+  
 }
 
 
+
+
+
+void getMagAxes(byte* mag){
+    
+}
