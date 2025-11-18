@@ -1,5 +1,8 @@
 #include <SPI.h>
 
+// ADD SECOND SPI BUS, 
+// GYRO SPI CLOCK SPEED = 8MHz, MAG SPI CLOCK SPEED = 10MHz
+
 #define GYRO_MISO 0
 #define GYRO_MOSI 0
 #define GYRO_CS 0
@@ -18,18 +21,25 @@
 
 uint16_t gyro[3];
 int accel[3];
-int mag[3];
 int angle[3];
+uint16_t mag[3];
+
+uint16_t time;
 
 int timeinterval[3];
 unsigned long currenttime;
 
 void setup() {
   Serial.begin(9600);
-  SPI.begin();
   pinMode(GYRO_CS, OUTPUT);
   pinMode(MAG_CS, OUTPUT);
   currenttime = micros();
+  digitalWrite(GYRO_CS, HIGH);
+  digitalWrite(MAG_CS, HIGH);
+
+  SPI.begin();
+  
+  SPI.beginTransaction(SPISettings(8000000, MSBFIRST, SPI_MODE0));
 }
 
 void loop() {
@@ -71,7 +81,18 @@ void getAngles(){
   angle[1] += gyro[1] * timedelta;
   angle[2] += gyro[2] * timedelta;
   currenttime = newtimes;
-  
+}
+
+void getMagAxes(uint16_t* mag){
+  uint16_t time = 0x00;
+  SPI.transfer(0x4F); // call txyz 
+  uint8_t status = SPI.transfer(0x00);
+  time = SPI.transfer(0x00) << 8;
+  time = time | SPI.transfer(0x00);
+  for(int i = 0; i < 3; i++){
+    mag[i] = SPI.transfer(0x00) << 8;
+    mag[i] = mag[i] | SPI.transfer(0x00);
+  }
 }
 
 
