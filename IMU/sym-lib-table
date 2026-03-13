@@ -4,4 +4,7 @@
   (lib (name "ADXL326BCPZ-RL7")(type "KiCad")(uri "${KIPRJMOD}/Parts/ADXL326 (Accel)/ADXL326BCPZ-RL7.kicad_sym")(options "")(descr ""))
   (lib (name "IAM-20380")(type "KiCad")(uri "${KIPRJMOD}/Parts/IAM_20380 (Gyro)/IAM-20380.kicad_sym")(options "")(descr ""))
   (lib (name "QFN-16_MLX90393_MEL")(type "KiCad")(uri "${KIPRJMOD}/Parts/MLX90393 (Mag)/QFN-16_MLX90393_MEL.kicad_sym")(options "")(descr ""))
+  (lib (name "SC0917")(type "KiCad")(uri "${KIPRJMOD}/Parts/Raspberry Pi/SC0917.kicad_sym")(options "")(descr ""))
+  (lib (name "ADXL380")(type "KiCad")(uri "${KIPRJMOD}/Parts/ADXL380 (New Accel)/ADXL380.kicad_sym")(options "")(descr ""))
+  (lib (name "RASPBERRY_PI_PICO")(type "KiCad")(uri "${KIPRJMOD}/Parts/Raspberry Pi/RASPBERRY_PI_PICO.kicad_sym")(options "")(descr ""))
 )
