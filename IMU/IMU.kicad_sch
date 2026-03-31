@@ -3574,6 +3574,16 @@
 		)
 		(uuid "25535280-2a25-4250-a64f-887b64045481")
 	)
+	(label "ACCEL_MISO"
+		(at 214.63 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "30c76aca-1723-4a29-8eef-d6b1586c2fa0")
+	)
 	(label "ACCEL_INT"
 		(at 196.85 142.24 180)
 		(effects
@@ -3594,7 +3604,7 @@
 		)
 		(uuid "38363f28-416c-4113-add5-1d2275b19db9")
 	)
-	(label "ACCEL_SDI"
+	(label "ACCEL_MOSI"
 		(at 196.85 134.62 180)
 		(effects
 			(font
@@ -3603,16 +3613,6 @@
 			(justify right bottom)
 		)
 		(uuid "3b45bc28-8926-45da-894c-146490f581fe")
-	)
-	(label "ACCEL_SDI"
-		(at 214.63 50.8 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3ff4cba1-19ce-49d1-b11f-79fb6b6a721f")
 	)
 	(label "GND"
 		(at 248.92 58.42 0)
@@ -3653,6 +3653,16 @@
 			(justify right bottom)
 		)
 		(uuid "4daf61d4-dc1c-41c5-99e6-1c05263b0e11")
+	)
+	(label "ACCEL_MOSI"
+		(at 214.63 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4f690c96-6427-4288-9cd1-85a3de88ea51")
 	)
 	(label "GND"
 		(at 248.92 45.72 0)
@@ -3854,17 +3864,7 @@
 		)
 		(uuid "b65516fe-d4ad-4ec5-bf6e-3bde5f414ec1")
 	)
-	(label "ACCEL_SDO"
-		(at 214.63 53.34 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "bdc49b87-1856-4925-b425-97913dbbc9d7")
-	)
-	(label "ACCEL_SDO"
+	(label "ACCEL_MISO"
 		(at 196.85 137.16 180)
 		(effects
 			(font
